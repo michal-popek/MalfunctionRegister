@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34902.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalfunctionRegister", "MalfunctionRegister\MalfunctionRegister.csproj", "{432C2FD6-8093-49A8-966E-3DD26D480A35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegister", "MalfunctionRegister\MalfunctionRegister.csproj", "{432C2FD6-8093-49A8-966E-3DD26D480A35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalfunctionRegisterApp.AppHost", "MalfunctionRegisterApp.AppHost\MalfunctionRegisterApp.AppHost.csproj", "{E2728503-8EB4-4D5F-B57D-63924F03967D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegisterApp.ServiceDefaults", "MalfunctionRegisterApp.ServiceDefaults\MalfunctionRegisterApp.ServiceDefaults.csproj", "{99723139-EB5D-4089-B829-60A3C78B81F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegisterApp.ApiService", "MalfunctionRegisterApp.ApiService\MalfunctionRegisterApp.ApiService.csproj", "{19A82AC0-0306-4A22-AB90-8C19E7456D9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegisterApp.Web", "MalfunctionRegisterApp.Web\MalfunctionRegisterApp.Web.csproj", "{5B118B0C-8B2A-47D8-B085-A288109D2F8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{432C2FD6-8093-49A8-966E-3DD26D480A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{432C2FD6-8093-49A8-966E-3DD26D480A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{432C2FD6-8093-49A8-966E-3DD26D480A35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2728503-8EB4-4D5F-B57D-63924F03967D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2728503-8EB4-4D5F-B57D-63924F03967D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2728503-8EB4-4D5F-B57D-63924F03967D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2728503-8EB4-4D5F-B57D-63924F03967D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99723139-EB5D-4089-B829-60A3C78B81F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99723139-EB5D-4089-B829-60A3C78B81F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99723139-EB5D-4089-B829-60A3C78B81F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99723139-EB5D-4089-B829-60A3C78B81F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A82AC0-0306-4A22-AB90-8C19E7456D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A82AC0-0306-4A22-AB90-8C19E7456D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A82AC0-0306-4A22-AB90-8C19E7456D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A82AC0-0306-4A22-AB90-8C19E7456D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

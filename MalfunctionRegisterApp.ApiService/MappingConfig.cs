@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MalfunctionRegisterApp.ApiService.Models;
-using MalfunctionRegisterApp.ApiService.Models.Dto;
+using MalfunctionRegisterApp.DataTransferObjects;
 
 namespace MalfunctionRegisterApp.ApiService
 {

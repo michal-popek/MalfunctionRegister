@@ -1,4 +1,4 @@
-﻿namespace MalfunctionRegisterApp.ApiService
+﻿namespace MalfunctionRegisterApp.DataTransferObjects
 {
     public enum ReportState
     {

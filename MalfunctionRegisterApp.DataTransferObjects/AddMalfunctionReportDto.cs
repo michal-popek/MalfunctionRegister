@@ -1,4 +1,4 @@
-﻿namespace MalfunctionRegisterApp.ApiService.Models.Dto
+﻿namespace MalfunctionRegisterApp.DataTransferObjects
 {
     public class AddMalfunctionReportDto
     {

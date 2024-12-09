@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MalfunctionRegisterApp.ApiService\MalfunctionRegisterApp.ApiService.csproj" />
+    <ProjectReference Include="..\MalfunctionRegisterApp.DataTransferObjects\MalfunctionRegisterApp.DataTransferObjects.csproj" />
     <ProjectReference Include="..\MalfunctionRegisterApp.ServiceDefaults\MalfunctionRegisterApp.ServiceDefaults.csproj" />
   </ItemGroup>
 

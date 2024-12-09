@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegisterApp.ApiS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegisterApp.Web", "MalfunctionRegisterApp.Web\MalfunctionRegisterApp.Web.csproj", "{5B118B0C-8B2A-47D8-B085-A288109D2F8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalfunctionRegisterApp.DataTransferObjects", "MalfunctionRegisterApp.DataTransferObjects\MalfunctionRegisterApp.DataTransferObjects.csproj", "{65685826-E01B-4246-A649-34435AEB29B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B118B0C-8B2A-47D8-B085-A288109D2F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65685826-E01B-4246-A649-34435AEB29B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65685826-E01B-4246-A649-34435AEB29B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65685826-E01B-4246-A649-34435AEB29B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65685826-E01B-4246-A649-34435AEB29B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

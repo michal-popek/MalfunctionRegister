@@ -1,4 +1,6 @@
-﻿namespace MalfunctionRegisterApp.ApiService.Models
+﻿using MalfunctionRegisterApp.DataTransferObjects;
+
+namespace MalfunctionRegisterApp.ApiService.Models
 {
     public class MalfunctionReport : ModifyMalfunctionReport
     {

@@ -20,11 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MalfunctionRegisterApp.DataTransferObjects\MalfunctionRegisterApp.DataTransferObjects.csproj" />
     <ProjectReference Include="..\MalfunctionRegisterApp.ServiceDefaults\MalfunctionRegisterApp.ServiceDefaults.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Dto\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
 

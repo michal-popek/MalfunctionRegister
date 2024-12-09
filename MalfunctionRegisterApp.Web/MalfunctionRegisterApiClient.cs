@@ -1,5 +1,5 @@
-using MalfunctionRegisterApp.ApiService.Models.Dto;
-using Microsoft.AspNetCore.Mvc;
+
+using MalfunctionRegisterApp.DataTransferObjects;
 
 namespace MalfunctionRegisterApp.Web;
 

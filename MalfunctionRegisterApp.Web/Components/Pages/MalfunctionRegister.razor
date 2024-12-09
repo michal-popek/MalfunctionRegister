@@ -1,0 +1,51 @@
+﻿@page "/malfunctionregister"
+@attribute [StreamRendering(true)]
+@attribute [OutputCache(Duration = 5)]
+
+@inject MalfunctionRegisterApiClient MalfunctionRegisterApi
+
+<PageTitle>Malfunctions</PageTitle>
+
+<h1>Malfunctions</h1>
+
+<p>This component demonstrates showing data loaded from a backend API service.</p>
+
+@if (malfunctions == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>State</th>
+                <th>Title</th>
+                <th>Comment</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var malfunction in malfunctions)
+            {
+                <tr>
+                    <td>@malfunction.Id</td>
+                    <td>@malfunction.State</td>
+                    <td>@malfunction.Title</td>
+                    <td>@malfunction.Comment</td>
+                    <td>@malfunction.Author</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private MalfunctionRegisterApp.ApiService.Models.Dto.MalfunctionReportDto[]? malfunctions;
+
+    protected override async Task OnInitializedAsync()
+    {
+        malfunctions = await MalfunctionRegisterApi.GetMalfunctionsAsync();
+    }
+}

@@ -5,6 +5,7 @@ var sql = builder.AddSqlServer("malfunctionregisterserver").AddDatabase("Malfunc
 var cache = builder.AddRedis("cache");
 
 var apiService = builder.AddProject<Projects.MalfunctionRegisterApp_ApiService>("apiservice")
+    .WithExternalHttpEndpoints()
     .WithReference(sql).
     WaitFor(sql);
 

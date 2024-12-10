@@ -27,6 +27,7 @@ namespace MalfunctionRegisterApp.ApiService.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MalfunctionReportDto>))]
         public ActionResult<IEnumerable<MalfunctionReportDto>> GetReports()
         {
+            Console.WriteLine("MalfunctionRegisterController::GetReports starts");
             var list = _mapper.Map<List<MalfunctionReportDto>>(_reportsRepository.GetReports());
             return Ok(list);
         }

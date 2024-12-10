@@ -1,6 +1,6 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var sql = builder.AddSqlServer("malfunctionregisterserver").AddDatabase("MalfunctionRegisterDatabase");
+var sql = builder.AddAzureSqlServer("malfunctionregisterserver").AddDatabase("MalfunctionRegisterDatabase");
 
 var cache = builder.AddRedis("cache");
 

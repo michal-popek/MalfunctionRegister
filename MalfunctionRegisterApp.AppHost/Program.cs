@@ -3,7 +3,7 @@ var builder = DistributedApplication.CreateBuilder(args);
 var sql = builder.AddAzureSqlServer("malfunctionregisterserver"); 
 var dataBase = sql.AddDatabase("MalfunctionRegisterDatabase");
 
-var migrationServive = builder.AddProject<Projects.MalfunctionRegisterApp_MigrationService>("malfunctionregisterapp-migrationservice").
+var migrationServive = builder.AddProject<Projects.MalfunctionRegisterApp_MigrationService>("migrationservice").
     WithReference(dataBase).
     WaitFor(dataBase);
 

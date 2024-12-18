@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace MalfunctionRegisterApp.ApiService.Models
+namespace MalfunctionRegisterApp.ApiModel
 {
     public class ModifyMalfunctionReport : AddMalfunctionReport
     {

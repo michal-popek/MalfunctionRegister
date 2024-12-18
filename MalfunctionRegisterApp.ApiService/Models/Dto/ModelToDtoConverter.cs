@@ -1,3 +1,4 @@
+using MalfunctionRegisterApp.ApiModel;
 using MalfunctionRegisterApp.DataTransferObjects;
 
 namespace MalfunctionRegisterApp.ApiService.Models.Dto

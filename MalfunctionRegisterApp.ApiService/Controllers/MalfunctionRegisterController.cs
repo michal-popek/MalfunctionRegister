@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using MalfunctionRegisterApp.ApiModel;
 using MalfunctionRegisterApp.ApiService.Data;
-using MalfunctionRegisterApp.ApiService.Models;
 using MalfunctionRegisterApp.ApiService.Models.Dto;
 using MalfunctionRegisterApp.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;

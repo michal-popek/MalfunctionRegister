@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MalfunctionRegisterApp.Web"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalfunctionRegisterApp.DataTransferObjects", "MalfunctionRegisterApp.DataTransferObjects\MalfunctionRegisterApp.DataTransferObjects.csproj", "{65685826-E01B-4246-A649-34435AEB29B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalfunctionRegisterApp.MigrationService", "MalfunctionRegisterApp.MigrationService\MalfunctionRegisterApp.MigrationService.csproj", "{6E6E32A5-46EC-491A-BFE3-7E36A5F44F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalfunctionRegisterApp.ApiModel", "MalfunctionRegisterApp.ApiModel\MalfunctionRegisterApp.ApiModel.csproj", "{CDAE286B-2972-4B77-8ABC-6D227941F135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{65685826-E01B-4246-A649-34435AEB29B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65685826-E01B-4246-A649-34435AEB29B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65685826-E01B-4246-A649-34435AEB29B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6E32A5-46EC-491A-BFE3-7E36A5F44F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6E32A5-46EC-491A-BFE3-7E36A5F44F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6E32A5-46EC-491A-BFE3-7E36A5F44F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6E32A5-46EC-491A-BFE3-7E36A5F44F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDAE286B-2972-4B77-8ABC-6D227941F135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAE286B-2972-4B77-8ABC-6D227941F135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAE286B-2972-4B77-8ABC-6D227941F135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAE286B-2972-4B77-8ABC-6D227941F135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

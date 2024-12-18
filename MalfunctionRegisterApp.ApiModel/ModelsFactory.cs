@@ -1,6 +1,6 @@
 ﻿using MalfunctionRegisterApp.DataTransferObjects;
 
-namespace MalfunctionRegisterApp.ApiService.Models
+namespace MalfunctionRegisterApp.ApiModel
 {
     public class ModelsFactory
     {

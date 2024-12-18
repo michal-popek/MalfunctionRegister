@@ -1,4 +1,4 @@
-﻿using MalfunctionRegisterApp.ApiService.Models;
+﻿using MalfunctionRegisterApp.ApiModel;
 
 namespace MalfunctionRegisterApp.ApiService.Data
 {

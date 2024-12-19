@@ -10,7 +10,7 @@ builder.AddServiceDefaults();
 // Add services to the container.
 
 builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MalfunctionRegisterDatabase"), sqlOptions =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("malfunctionregisterdatabase"), sqlOptions =>
     {
         sqlOptions.MigrationsAssembly("MalfunctionRegisterApp.MigrationService");
         // Workaround for https://github.com/dotnet/aspire/issues/1023

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MalfunctionRegisterApp.ApiModel;
 using MalfunctionRegisterApp.ApiService.Data;
-using MalfunctionRegisterApp.ApiService.Models.Dto;
 using MalfunctionRegisterApp.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +12,6 @@ namespace MalfunctionRegisterApp.ApiService.Controllers
     {
         private readonly MalfunctionReportsRepository _reportsRepository;
         private readonly IMapper _mapper;
-        private DtoFactory _dtoFactory = new DtoFactory();
         private ModelsFactory _modelsFactory;
 
         public MalfunctionRegisterController(ApplicationDbContext db, IMapper mapper)
@@ -27,6 +25,8 @@ namespace MalfunctionRegisterApp.ApiService.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MalfunctionReportDto>))]
         public ActionResult<IEnumerable<MalfunctionReportDto>> GetReports()
         {
+            _reportsRepository.Add(new AddMalfunctionReport() { Author="author", Comment="comment", Title="title"});
+
             Console.WriteLine("MalfunctionRegisterController::GetReports starts");
             var list = _mapper.Map<List<MalfunctionReportDto>>(_reportsRepository.GetReports());
             return Ok(list);

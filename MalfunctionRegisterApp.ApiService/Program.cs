@@ -10,7 +10,9 @@ internal class Program
         // Add service defaults & Aspire components.
         builder.AddServiceDefaults();
 
-        builder.AddSqlServerDbContext<ApplicationDbContext>("MalfunctionRegisterDatabase");
+        //var connectionName = builder.Configuration.GetValue(typeof(string), "ConnectionStrings:malfunctionregisterserver") as string;
+        //Console.WriteLine($"ConnectionName: {connectionName}");
+        builder.AddSqlServerDbContext<ApplicationDbContext>("malfunctionregisterdatabase");
         builder.Services.AddAutoMapper(typeof(MappingConfig));
         builder.Services.AddControllers();
 
@@ -32,11 +34,11 @@ internal class Program
 
         if (app.Environment.IsDevelopment())
         {
-            using (var scope = app.Services.CreateScope())
-            {
-                var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                context.Database.EnsureCreated();
-            }
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            //    context.Database.EnsureCreated();
+            //}
         }
         else
         {
@@ -46,6 +48,8 @@ internal class Program
             app.UseHsts();
         }
 
+
+        app.MapDefaultEndpoints();
         app.MapControllers();
 
         app.Run();

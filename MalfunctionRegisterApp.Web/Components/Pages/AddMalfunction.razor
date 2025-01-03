@@ -1,0 +1,26 @@
+﻿@page "/addmalfunction"
+@rendermode InteractiveServer
+
+@inject MalfunctionRegisterApiClient MalfunctionRegisterApi
+
+<PageTitle>AddMalfunction</PageTitle>
+
+<h1>New Malfunction</h1>
+
+<p role="status">Current status: @_currentStatus</p>
+
+<button class="btn btn-primary" @onclick="ReportNewMalfunction">Report New Malfunction</button>
+
+@code {
+    private MalfunctionRegisterApp.DataTransferObjects.AddMalfunctionReportDto _newMalfunction = new MalfunctionRegisterApp.DataTransferObjects.AddMalfunctionReportDto("title", "comment", "author");
+    private string _currentStatus = "Test";
+    private int _counter = 0;
+
+    private async void ReportNewMalfunction()
+    {
+        _newMalfunction.Title += _counter;
+        _counter ++;
+        var value = await MalfunctionRegisterApi.AddMalfunctionsAsync(_newMalfunction);
+        _currentStatus = value;
+    }
+}

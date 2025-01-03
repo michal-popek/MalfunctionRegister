@@ -37,4 +37,18 @@ public class MalfunctionRegisterApiClient(HttpClient httpClient)
 
         
     }
+
+    public async Task<string> AddMalfunctionsAsync(AddMalfunctionReportDto newReport, CancellationToken cancellationToken = default)
+    {
+        var errorMessage = "Completed Successfully";
+        try
+        {
+            var value = await httpClient.PostAsJsonAsync<AddMalfunctionReportDto>("api/MalfunctionRegister", newReport, cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error adding new report. Error details: {ex.Message}";
+        }
+        return errorMessage;
+    }
 }

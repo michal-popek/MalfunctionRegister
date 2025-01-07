@@ -41,7 +41,14 @@ jobs:
       - name: Install Dapr
         uses: dapr/setup-dapr@v1
         with:
-            version: '1.14.4'
+            version: '1.14.1'
+            
+      - name: Initialize Dapr
+        if: ${{ matrix.os == 'ubuntu-latest'}}
+        run: |
+            export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+            dapr init --runtime-version=1.14.1
+            dapr --version
 
       - name: Log in with Azure (Federated Credentials)
         if: ${{ env.AZURE_CLIENT_ID != '' }}

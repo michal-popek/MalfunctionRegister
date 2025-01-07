@@ -12,12 +12,14 @@ var cache = builder.AddRedis("cache");
 var apiService = builder.AddProject<Projects.MalfunctionRegisterApp_ApiService>("apiservice")
     .WithExternalHttpEndpoints()
     .WithReference(dataBase).
-    WaitFor(migrationServive);
+    WaitForCompletion(migrationServive).
+    WithDaprSidecar("apiserviceSidecar");
 
 builder.AddProject<Projects.MalfunctionRegisterApp_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithReference(cache)
     .WithReference(apiService).
-    WaitFor(apiService);
+    WaitFor(apiService).
+    WithDaprSidecar("webfrontendSidecar");
 
 builder.Build().Run();

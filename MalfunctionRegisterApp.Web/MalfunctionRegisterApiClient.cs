@@ -1,9 +1,10 @@
 
+using Dapr.Client;
 using MalfunctionRegisterApp.DataTransferObjects;
 
 namespace MalfunctionRegisterApp.Web;
 
-public class MalfunctionRegisterApiClient(HttpClient httpClient)
+public class MalfunctionRegisterApiClient(DaprClient httpClient)
 {
     public async Task<MalfunctionReportDto[]> GetMalfunctionsAsync(int maxItems = 10, CancellationToken cancellationToken = default)
     {
@@ -11,24 +12,7 @@ public class MalfunctionRegisterApiClient(HttpClient httpClient)
 
         try
         {
-            var value = await httpClient.GetFromJsonAsync<IEnumerable<MalfunctionReportDto>>("api/MalfunctionRegister", cancellationToken);
-
-            if (value != null)
-            {
-                foreach (var malfunction in value)
-                {
-                    if (malfunctions?.Count >= maxItems)
-                    {
-                        break;
-                    }
-                    if (malfunction is not null)
-                    {
-                        malfunctions ??= [];
-                        malfunctions.Add(malfunction);
-                    }
-                }
-            }
-            return malfunctions?.ToArray() ?? [];
+            return await httpClient.InvokeMethodAsync<MalfunctionReportDto[]>(HttpMethod.Get, "apiserviceSidecar", "api/MalfunctionRegister");
         }
         catch (Exception ex)
         {
@@ -43,7 +27,7 @@ public class MalfunctionRegisterApiClient(HttpClient httpClient)
         var errorMessage = "Completed Successfully";
         try
         {
-            var value = await httpClient.PostAsJsonAsync<AddMalfunctionReportDto>("api/MalfunctionRegister", newReport, cancellationToken);
+            await httpClient.InvokeMethodAsync<AddMalfunctionReportDto>(HttpMethod.Post, "apiserviceSidecar", "api/MalfunctionRegister", newReport);
         }
         catch (Exception ex)
         {

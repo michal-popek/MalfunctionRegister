@@ -81,3 +81,5 @@ jobs:
 
       - name: Deploy Application
         run: azd deploy --no-prompt
+        env:
+          DAPR_CLI_PATH: ${{ steps.install-dapr.outputs.dapr-path }}

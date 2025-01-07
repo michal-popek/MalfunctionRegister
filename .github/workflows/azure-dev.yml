@@ -37,6 +37,11 @@ jobs:
         
       - name: List workloads
         run: dotnet workload list
+        
+      - name: Install Dapr
+        uses: dapr/setup-dapr@v1
+        with:
+            version: '1.14.4'
 
       - name: Log in with Azure (Federated Credentials)
         if: ${{ env.AZURE_CLIENT_ID != '' }}

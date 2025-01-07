@@ -12,7 +12,7 @@ public class MalfunctionRegisterApiClient(DaprClient httpClient)
 
         try
         {
-            return await httpClient.InvokeMethodAsync<MalfunctionReportDto[]>(HttpMethod.Get, "apiserviceSidecar", "api/MalfunctionRegister");
+            return await httpClient.InvokeMethodAsync<MalfunctionReportDto[]>(HttpMethod.Get, "apiservicesidecar", "api/MalfunctionRegister");
         }
         catch (Exception ex)
         {
@@ -27,7 +27,7 @@ public class MalfunctionRegisterApiClient(DaprClient httpClient)
         var errorMessage = "Completed Successfully";
         try
         {
-            await httpClient.InvokeMethodAsync<AddMalfunctionReportDto>(HttpMethod.Post, "apiserviceSidecar", "api/MalfunctionRegister", newReport);
+            await httpClient.InvokeMethodAsync<AddMalfunctionReportDto>(HttpMethod.Post, "apiservicesidecar", "api/MalfunctionRegister", newReport);
         }
         catch (Exception ex)
         {

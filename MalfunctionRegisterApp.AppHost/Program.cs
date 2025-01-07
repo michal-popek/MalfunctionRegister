@@ -17,14 +17,14 @@ var apiService = builder.AddProject<Projects.MalfunctionRegisterApp_ApiService>(
     .WithExternalHttpEndpoints()
     .WithReference(dataBase).
     WaitForCompletion(migrationServive).
-    WithDaprSidecar("apiserviceSidecar");
+    WithDaprSidecar("apiservicesidecar");
 
 builder.AddProject<Projects.MalfunctionRegisterApp_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithReference(cache)
     .WithReference(apiService).
     WaitFor(apiService).
-    WithDaprSidecar("webfrontendSidecar");
+    WithDaprSidecar("webfrontendsidecar");
 
 if (builder.Configuration.GetValue<string>("DAPR_CLI_PATH") is { } daprCliPath)
 {

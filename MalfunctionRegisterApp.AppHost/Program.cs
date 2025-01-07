@@ -1,3 +1,7 @@
+using Aspire.Hosting.Dapr;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
 var sql = builder.AddSqlServer("malfunctionregisterserver"); 
@@ -21,5 +25,13 @@ builder.AddProject<Projects.MalfunctionRegisterApp_Web>("webfrontend")
     .WithReference(apiService).
     WaitFor(apiService).
     WithDaprSidecar("webfrontendSidecar");
+
+if (builder.Configuration.GetValue<string>("DAPR_CLI_PATH") is { } daprCliPath)
+{
+    builder.Services.Configure<DaprOptions>(options =>
+    {
+        options.DaprPath = daprCliPath;
+    });
+}
 
 builder.Build().Run();
